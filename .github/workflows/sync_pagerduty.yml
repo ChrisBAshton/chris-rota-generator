@@ -24,4 +24,5 @@ jobs:
       - name: Configure GitHub
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: bundle exec bin/sync_pagerduty_cron.rb
+      - name: Synchronise PagerDuty
+        run: bundle exec rake
