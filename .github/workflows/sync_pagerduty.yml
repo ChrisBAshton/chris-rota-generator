@@ -26,3 +26,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
       - name: Synchronise PagerDuty
         run: bundle exec rake
+        env:
+          PAGER_DUTY_API_KEY: ${{ secrets.PAGER_DUTY_API_KEY }}
+          ROTA_SHEET_URL: ${{ secrets.ROTA_SHEET_URL }}
+          ROTA_TAB_NAME: ${{ secrets.ROTA_TAB_NAME }}
